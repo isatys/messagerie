@@ -17,8 +17,14 @@ CREATE TABLE tasks (
                          foreign key (id_todolist) references todolists(id)
 );
 */
-DROP TABLE IF EXISTS users;
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
                            id INT AUTO_INCREMENT PRIMARY KEY,
                            name VARCHAR(250) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS messages (
+                                     id INT AUTO_INCREMENT PRIMARY KEY,
+                                     message VARCHAR(250) NOT NULL
+    );
+
+
