@@ -1,4 +1,4 @@
-package com.ynov.chat.Config;
+package com.ynov.chat.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
