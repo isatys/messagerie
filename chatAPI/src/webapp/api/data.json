@@ -1,0 +1,45 @@
+{
+  "api": {
+    "baseUrl": "http://localhost:9000/messages/",
+    "endpoints": {
+      "sendMessage": {
+        "url": "send",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "request": {
+          "from": "{username}",
+          "to": "{recipientUsername}",
+          "message": "{message}"
+        },
+        "response": {
+          "status": "success",
+          "message": "Your message was sent successfully."
+        }
+      },
+      "getMessages": {
+        "url": "messages/{username}",
+        "method": "GET",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "response": {
+          "status": "success",
+          "data": [
+            {
+              "from": "{username}",
+              "message": "{message}",
+              "timestamp": "{timestamp}"
+            },
+            {
+              "from": "{username}",
+              "message": "{message}",
+              "timestamp": "{timestamp}"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
