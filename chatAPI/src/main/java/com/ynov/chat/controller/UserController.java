@@ -34,7 +34,7 @@ public class UserController {
 
     @GetMapping("/users")
     public Iterable<User> getUsers() {
-        return userService.getUsers();
+        return userService.getAllUsers();
     }
 
     @PutMapping("/users/{id}")
